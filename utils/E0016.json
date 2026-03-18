@@ -1,0 +1,202 @@
+{
+    "run_id": "E0016",
+    "timestamp": "20260319_000308",
+    "dataset": {
+        "name": "titanic.csv"
+    },
+    "model": {
+        "logistic": {
+            "model_name": "logistic",
+            "model_family": "linear model",
+            "hyperparameters": {
+                "classifier__C": 0.1
+            },
+            "metrics": {
+                "accuracy": {
+                    "training": {
+                        "mean": 0.794,
+                        "sd": 0.01
+                    },
+                    "validation": {
+                        "mean": 0.792,
+                        "sd": 0.033
+                    }
+                },
+                "f1": {
+                    "training": {
+                        "mean": 0.71,
+                        "sd": 0.014
+                    },
+                    "validation": {
+                        "mean": 0.71,
+                        "sd": 0.043
+                    }
+                },
+                "logloss": {
+                    "training": {
+                        "mean": 0.479,
+                        "sd": 0.011
+                    },
+                    "validation": {
+                        "mean": 0.491,
+                        "sd": 0.043
+                    }
+                }
+            },
+            "generalisation_gap": 0.002,
+            "test_metrics": {
+                "accuracy": 0.7877094972067039,
+                "f1": 0.7285714285714285,
+                "logloss": 0.47630238601551683
+            }
+        },
+        "decision_trees": {
+            "model_name": "decision trees",
+            "model_family": "tree model",
+            "hyperparameters": {
+                "classifier__criterion": "entropy",
+                "classifier__max_depth": 3,
+                "classifier__min_samples_leaf": 1
+            },
+            "metrics": {
+                "accuracy": {
+                    "training": {
+                        "mean": 0.816,
+                        "sd": 0.009
+                    },
+                    "validation": {
+                        "mean": 0.806,
+                        "sd": 0.039
+                    }
+                },
+                "f1": {
+                    "training": {
+                        "mean": 0.744,
+                        "sd": 0.017
+                    },
+                    "validation": {
+                        "mean": 0.734,
+                        "sd": 0.059
+                    }
+                },
+                "logloss": {
+                    "training": {
+                        "mean": 0.429,
+                        "sd": 0.014
+                    },
+                    "validation": {
+                        "mean": 0.694,
+                        "sd": 0.313
+                    }
+                }
+            },
+            "generalisation_gap": 0.009,
+            "test_metrics": {
+                "accuracy": 0.7877094972067039,
+                "f1": 0.7323943661971831,
+                "logloss": 0.6369127668071229
+            }
+        },
+        "random_forest": {
+            "model_name": "random forest",
+            "model_family": "ensemble model",
+            "hyperparameters": {
+                "classifier__criterion": "entropy",
+                "classifier__max_depth": 3,
+                "classifier__n_estimators": 100
+            },
+            "metrics": {
+                "accuracy": {
+                    "training": {
+                        "mean": 0.806,
+                        "sd": 0.01
+                    },
+                    "validation": {
+                        "mean": 0.798,
+                        "sd": 0.037
+                    }
+                },
+                "f1": {
+                    "training": {
+                        "mean": 0.732,
+                        "sd": 0.017
+                    },
+                    "validation": {
+                        "mean": 0.718,
+                        "sd": 0.054
+                    }
+                },
+                "logloss": {
+                    "training": {
+                        "mean": 0.445,
+                        "sd": 0.012
+                    },
+                    "validation": {
+                        "mean": 0.468,
+                        "sd": 0.04
+                    }
+                }
+            },
+            "generalisation_gap": 0.008,
+            "test_metrics": {
+                "accuracy": 0.7821229050279329,
+                "f1": 0.7272727272727273,
+                "logloss": 0.4703362144891114
+            }
+        },
+        "XG_boost": {
+            "model_name": "XG boost",
+            "model_family": "boosting model",
+            "hyperparameters": {
+                "classifier__learning_rate": 0.05,
+                "classifier__max_depth": 3,
+                "classifier__n_estimators": 100
+            },
+            "metrics": {
+                "accuracy": {
+                    "training": {
+                        "mean": 0.851,
+                        "sd": 0.013
+                    },
+                    "validation": {
+                        "mean": 0.817,
+                        "sd": 0.03
+                    }
+                },
+                "f1": {
+                    "training": {
+                        "mean": 0.789,
+                        "sd": 0.019
+                    },
+                    "validation": {
+                        "mean": 0.743,
+                        "sd": 0.046
+                    }
+                },
+                "logloss": {
+                    "training": {
+                        "mean": 0.374,
+                        "sd": 0.016
+                    },
+                    "validation": {
+                        "mean": 0.438,
+                        "sd": 0.054
+                    }
+                }
+            },
+            "generalisation_gap": 0.034,
+            "test_metrics": {
+                "accuracy": 0.7932960893854749,
+                "f1": 0.7338129496402878,
+                "logloss": 0.43590654842145427
+            }
+        }
+    },
+    "metadata": {
+        "random_seed": 42,
+        "n_jobs": -1,
+        "GridSearchCV_scoring": "f1",
+        "CV": 5,
+        "test_size": 0.2
+    }
+}

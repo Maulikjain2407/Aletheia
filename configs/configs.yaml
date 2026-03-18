@@ -1,0 +1,43 @@
+path:
+  data_dir: data
+  training_path: titanic.csv
+
+experiment_values:
+  seed: 42
+  test_size: 0.2
+  scoring: "f1"
+  n_jobs: -1
+  cv: 5
+
+stratified_fold:
+  n_splits: 5
+  shuffle: true
+
+model_parameters:
+
+  logistic_parameters:
+    C: [0.01,0.1,1,10,100]
+
+  decision_tree_parameters:
+    criterion: ["gini","entropy"]
+    max_depth: [1,2,3]
+    min_samples_leaf: [1,2,3]
+
+  random_forest_parameters:
+    criterion: ["gini","entropy"]
+    n_estimators: [50,100,200,300]
+    max_depth: [1,2,3]
+
+  xgboost_parameters:
+    learning_rate: [0.05,0.1]
+    n_estimators: [50,100,200,300]
+    max_depth: [1,2,3]
+
+scoring_parameters:    
+  metrics:
+    accuracy: "accuracy"
+    f1: "f1"
+    log_loss: "neg_log_loss"
+
+dataset_name:
+  name: "titanic.csv"

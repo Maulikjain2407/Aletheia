@@ -4,7 +4,7 @@ from sklearn.ensemble import RandomForestClassifier
 from xgboost import XGBClassifier
 
 from sklearn.pipeline import Pipeline
-from src.data_cleaning import get_preprocessor
+from src.data_cleaner import get_preprocessor
 
 from configs.config_loader import model_parameters as mp
 

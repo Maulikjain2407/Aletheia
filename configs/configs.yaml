@@ -41,3 +41,14 @@ scoring_parameters:
 
 dataset_name:
   name: "titanic.csv"
+
+summary_path:
+  utils_folder: utils
+  summary_csv: summary.csv
+  graphs_path: graphs
+
+lists:
+  models_list: ["logistic","decision_trees","random_forest","XG_boost"]
+  metrics_list: ["accuracy","f1","logloss"]
+  single: ["logistic","decision_trees"]
+  ensemble: ["random_forest","XG_boost"]

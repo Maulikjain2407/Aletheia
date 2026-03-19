@@ -8,8 +8,14 @@ def load_config():
 configs=load_config()
 
 base_path=Path(__file__).resolve().parent.parent
+
 data_path=base_path/configs["path"]["data_dir"]
 training_path=data_path/configs["path"]["training_path"]
+
+utils_folder_path=base_path/configs["summary_path"]["utils_folder"]
+summary_csv_path=utils_folder_path/configs["summary_path"]["summary_csv"]
+
+graphs_path=utils_folder_path/configs["summary_path"]["graphs_path"]
 
 SEED=configs["experiment_values"]["seed"]
 TEST_SIZE=configs["experiment_values"]["test_size"]
@@ -56,3 +62,8 @@ class model_parameters:
                         "max_depth":XGBOOST_MAX_DEPTH,
                         "learning_rate":XGBOOST_LEARNING_RATE
                         }
+    
+MODEL_NAMES=configs["lists"]["models_list"]
+METRICS_LIST=configs["lists"]["metrics_list"]
+SINGLE_MODELS=configs["lists"]["single"]
+ENSEMBLE_MODELS=configs["lists"]["ensemble"]

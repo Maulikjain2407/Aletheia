@@ -5,11 +5,15 @@ from src.experiments import split
 from src.models import get_model
 from src.tuning import tuner
 from src.metrics import model_eval
+from src.visualizaton.data_visualizer import grapher
 
-from configs.config_loader import CV, SEED, TEST_SIZE, DATASET_NAME, SCORING, N_JOBS
+from configs.config_loader import CV, SEED, TEST_SIZE, DATASET_NAME, SCORING, N_JOBS,summary_csv_path
+
 from logger.experiment_logger import experiment_logger
 
 start = time.time()
+
+plots_inputs=input("Does the user wants plots?(Y/N)")
 
 
 def main():
@@ -81,6 +85,14 @@ if __name__ == "__main__":
         n_jobs=N_JOBS,
         cv=CV
     )
+
+    if plots_inputs.upper()=="Y":
+        
+        g=grapher(summary_csv_path=summary_csv_path)
+        g.plot_cv_sd()
+        g.plot_variance_grouped()
+        g.plot_generalisation_gap()
+        g.plot_train_vs_validation()
 
 end = time.time()
 print("TOTAL TIME =", end - start)

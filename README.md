@@ -213,15 +213,6 @@ random_forests ✗
 
 ---
 
-## 📈 Future Improvements
-
-* Boxplots for distribution analysis
-* Statistical testing
-* Experiment versioning
-* Automated report generation
-
----
-
 ## ✅ Summary
 
 This artifact provides a complete experimental framework for:
